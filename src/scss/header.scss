@@ -1,26 +1,38 @@
 @import "variables.scss";
 .header {
+    margin-top: 50px;
 }
 .header__wrapper {
 }
 .header__container {
     display: flex;
     align-items: center;
-    padding: 0.5em
+    padding: 0.5em;
+    justify-content: space-between;
 }
 .container {
 }
 .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    line-height: 150%;
+    color: $headerColor;
 }
 .logo {
+    border-radius: 9px;
+    overflow: hidden;
 }
-.logo__img {  
+.logo__img {
+    border-radius: 9px;
 }
 .logo__name {
 }
 .header__menu {
     display: flex;
     gap: 2.5em;
+    justify-content: center;
 }
 .menu {
 }
@@ -50,11 +62,12 @@
 .header__controls {
 }
 .login {
+    padding: 0.75em 1.75em;
 }
 .header__login {
 }
 .signIn {
-    padding: 0.75em 1.75em;
+
 }
 .header__signIn {
     padding: 0.75em 1.75em;

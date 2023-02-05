@@ -44,6 +44,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  background-color: transparent;
 }
 
 button::-moz-focus-inner {
@@ -142,15 +143,39 @@ body {
   background-color: rgb(255, 110, 48);
 }
 
+.header {
+  margin-top: 50px;
+}
+
 .header__container {
   display: flex;
   align-items: center;
   padding: 0.5em;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.logo {
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.logo__img {
+  border-radius: 9px;
 }
 
 .header__menu {
   display: flex;
   gap: 2.5em;
+  justify-content: center;
 }
 
 .menu__item_drop {
@@ -172,7 +197,7 @@ body {
   display: none;
 }
 
-.signIn {
+.login {
   padding: 0.75em 1.75em;
 }
 
