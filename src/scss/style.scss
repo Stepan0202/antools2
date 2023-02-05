@@ -1,0 +1,78 @@
+@import "nullstyle.scss";
+@import "fonts.scss";
+@import "variables.scss";
+$container: calc(1052/1140*100%);
+   
+a:link {
+    color: $textColor;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.14em;
+  }
+
+  a:visited {
+    color: $textColor;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.14em;
+  }
+  a:hover,  a:active {
+    color: $buttonColor;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.14em;
+  }
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 138.5%;
+    letter-spacing: 0.08em;
+    background-color: $mainBackground;
+    color: $textColor;
+    width: 100%;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+  flex: 1 0 auto;
+}
+
+.container{
+    width: $container;
+    margin: 0 auto;
+}
+
+.button {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  color: #FDF5FF;
+}
+.button_transparent {
+  color: #FFFFFFC7;
+  background-color: none;
+}
+
+.button_colorfull {
+  border-radius: 6px;
+  background-color: $buttonColor;
+}
+.signIn {
+}
+.header__signIn {
+}
+
+@import "header.scss";
+
+@import "footer.scss";

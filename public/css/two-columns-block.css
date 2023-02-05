@@ -1,0 +1,63 @@
+[class*=__container] {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+[class*=__left-block] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 0 1 420px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 126%;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.blue-word {
+  color: #4285F4;
+}
+
+[class*=__text] {
+  margin-bottom: 24px;
+}
+
+[class*=__button]:not(.header__button) {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 40px;
+  text-align: center;
+  height: 40px;
+  min-width: 30.9523809524%;
+}
+[class*=__button]:not(.header__button) a {
+  display: inline-block;
+  padding-top: 12%;
+}
+[class*=__button]:not(.header__button) a:link {
+  color: #fff;
+}
+[class*=__button]:not(.header__button) a:visited {
+  color: #fff;
+}
+[class*=__button]:not(.header__button) a:hover {
+  color: #ffffff;
+}
+[class*=__button]:not(.header__button) a:active {
+  color: #ffffff;
+}
+
+.button_red {
+  background-color: #EC5863;
+  width: 100%;
+}
+
+[class*=__img] {
+  flex: 2 1 auto;
+}

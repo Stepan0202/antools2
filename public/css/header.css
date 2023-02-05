@@ -1,0 +1,37 @@
+.header__container {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.header__menu {
+  display: flex;
+  gap: 2.5em;
+}
+
+.menu__item_drop {
+  position: relative;
+}
+.menu__item_drop::after {
+  content: ">";
+  position: absolute;
+  top: 0.2em;
+  transform: rotate(90deg);
+  font-size: 1.5em;
+}
+.menu__item_drop:hover::after {
+  cursor: pointer;
+  color: rgb(255, 110, 48);
+}
+
+.dropMenu {
+  display: none;
+}
+
+.signIn {
+  padding: 0.75em 1.75em;
+}
+
+.header__signIn {
+  padding: 0.75em 1.75em;
+}

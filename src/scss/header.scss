@@ -1,0 +1,61 @@
+@import "variables.scss";
+.header {
+}
+.header__wrapper {
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    padding: 0.5em
+}
+.container {
+}
+.header__logo {
+}
+.logo {
+}
+.logo__img {  
+}
+.logo__name {
+}
+.header__menu {
+    display: flex;
+    gap: 2.5em;
+}
+.menu {
+}
+.menu__item {
+}
+.menu__item_drop {
+    position: relative;
+    &::after{
+        content: ">";
+        position:absolute;
+        top: 0.2em;
+        transform: rotate(90deg);
+        font-size: 1.5em;
+    }
+    &:hover::after{
+        cursor: pointer;
+        color: $buttonColor;
+    }
+}
+
+
+.dropMenu{
+    display: none;
+}
+.dropable {
+}
+.header__controls {
+}
+.login {
+}
+.header__login {
+}
+.signIn {
+    padding: 0.75em 1.75em;
+}
+.header__signIn {
+    padding: 0.75em 1.75em;
+}
