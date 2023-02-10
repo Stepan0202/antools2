@@ -149,6 +149,12 @@ h1 {
   line-height: 140%;
 }
 
+h2 {
+  font-size: 48px;
+  line-height: 129%;
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .header {
   margin-top: 50px;
 }
@@ -311,6 +317,22 @@ h1 {
 .lead__imageContainer {
   flex: 11 11 auto;
   text-align: end;
+}
+
+.cards__container {
+  text-align: center;
+}
+
+.cards__description {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 166%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.card__headerContainer .card__head {
+  display: flex;
 }
 
 .footer__container {

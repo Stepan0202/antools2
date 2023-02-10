@@ -9,14 +9,35 @@
                 <button type="submit" class="button button_colorfull lead__searchButton">Search</button>
             </form>
             <div class="lead__socialLinks socialLinks">
-                <a href="google.com" class="fbIconLink"><img src="/img/icons/fb_link.png" alt="Link to our Facebook page"></a>
-                <a href="#" class="instaIconLink"><img src="/img/icons/insta_link.jpg" alt="link to our Instagram page"></a>
-                <a href="#" class="twitterIconLink"><img src="/img/icons/twitter_link.jpg" alt="link to our Twitter page"></a>
+                <a href="google.com" class="fbIconLink socialLink"><img src="/img/icons/fb_link.png" alt="Link to our Facebook page"></a>
+                <a href="#" class="instaIconLink socialLink"><img src="/img/icons/insta_link.jpg" alt="link to our Instagram page"></a>
+                <a href="#" class="twitterIconLink socialLink"><img src="/img/icons/twitter_link.jpg" alt="link to our Twitter page"></a>
             </div>
         </div>
         <div class="lead__imageContainer">
             <img src="/img/lead__img.png" alt="" class="lead__img">
         </div>
 
+    </div>
+</section>
+<section class="cards">
+    <div class="cards__container container">
+        <h2 class="cards__header">Most Popular Tools</h2>
+        <p class="cards__description">Tools for the best Designers and Developers most popularly used in the world</p>
+        <section class="cards__container">
+            <section class="cards__item">@@include('./card.html', {
+                "logoSrc" : "/img/logos_sketch.png",
+                "logoAlt" : "Sketch logo",
+                "header" : "Sketch",
+                "descriptor" : "Trial & Paid",
+                "buttonName" : "Visit"
+            })
+            </section>
+            <section class="cards__item"></section>
+            <section class="cards__item"></section>
+            <section class="cards__item"></section>
+            <section class="cards__item"></section>
+            <section class="cards__item"></section>
+        </section>
     </div>
 </section>
