@@ -1,7 +1,7 @@
 @import "nullstyle.scss";
 @import "fonts.scss";
 @import "variables.scss";
-$container: calc(1052/1140*100%);
+
    
 a:link {
     color: $textColor;
@@ -68,11 +68,121 @@ body{
   border-radius: 6px;
   background-color: $buttonColor;
 }
-.signIn {
-}
-.header__signIn {
+
+h1{
+  font-size: 50px;
+  color:rgba(255, 255, 255, 0.9);
+  line-height: 140%;
 }
 
 @import "header.scss";
+.lead {
+  display: flex;
+  justify-content: flex-end;
+}
+.container {
+}
+.lead__container {
+  display: flex;
+  justify-content: space-between;
+  max-height: 500px;
+  overflow-y: hidden;
+  max-width: 1308px;
+}
+.lead__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 9 9 600px;
+  padding: 90px 0 0;
+}
+.lead__header {
+  margin-bottom: 30px;
+}
+.colorText{
+  color: $buttonColor;
+}
+.lead__text {
+  font-size: 18px;
+  line-height: 166%;
+  font-weight:400;
+  margin-bottom: 60px;
+}
+.lead__searchForm {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  min-width: 80%;
+  max-width: 498px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0 2% 0 3%;
+
+  &::before{
+    content: url(/img/icons/search.png);
+  }
+
+}
+
+.lead__search {
+  min-height: 64px;
+  background-color: rgba(255, 255, 255, 0);
+  flex: 3 3 auto;
+  padding-left: 1em;
+
+}
+
+.lead__searchButton{
+  padding: 12px 36.12px;
+  flex: 1 1 130px;
+  max-height: 66%;
+}
+
+.lead__socialLinks {
+  margin-top: 20px;
+
+}
+.socialLinks {
+  display: flex;
+  gap: 45px;
+}
+
+.socialLink{
+
+}
+.fbIconLink {
+  &:hover{
+    background: url('/img/icons/fb_hover.jpg') no-repeat;
+  }
+  &:hover img{
+    opacity: 0%;
+  }
+}
+.instaIconLink {
+  display: inline-block;
+  &:hover{
+    background: url('/img/icons/insta_hover.jpg') no-repeat;
+  }
+  &:hover img{
+    opacity: 0%;
+  }
+}
+.twitterIconLink {
+  &:hover{
+    background: url('/img/icons/twitter_hover.jpg') no-repeat;
+  }
+  &:hover img{
+    opacity: 0%;
+    
+  }
+}
+.lead__imageContainer {
+  flex: 11 11 auto;
+  text-align: end;
+}
+.lead__img {
+}
+
 
 @import "footer.scss";
