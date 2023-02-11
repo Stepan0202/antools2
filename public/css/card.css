@@ -1,6 +1,23 @@
 .card {
   max-width: 392px;
   position: relative;
+  border-radius: 15px;
+}
+.card *:not(.card__download) {
+  border-radius: 15px;
+  cursor: default;
+}
+.card:hover .card_container {
+  -webkit-animation: cardHover 0.1s linear 1 normal running 0s forwards;
+          animation: cardHover 0.1s linear 1 normal running 0s forwards;
+}
+.card:hover .card_container {
+  margin-bottom: 20px;
+}
+.card:hover .card__button {
+  background-color: rgb(255, 110, 48);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
 }
 .card:hover ::before {
   content: "";
@@ -9,20 +26,82 @@
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(1px);
-  background: linear-gradient(45deg, #283036 80%, rgba(255, 110, 48, 0.55) 100%);
+  background: rgba(255, 255, 255, 0.005);
   z-index: -1;
-  border-radius: 15px;
+  overflow: hidden;
+}
+.card:hover .card_container::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  width: 20%;
+  height: 21%;
+  filter: blur(25px);
+  overflow: hidden;
+  background-color: rgba(255, 110, 48, 0.55);
+  z-index: 0;
+}
+.card:hover .card__header {
+  color: rgba(255, 255, 255, 0.9);
+}
+.card:hover .card__descriptor {
+  color: rgb(255, 165, 55);
+}
+.card:hover .card__text {
+  color: rgba(255, 255, 255, 0.78);
 }
 
+@-webkit-keyframes cardHover {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-4px);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-12px);
+  }
+  80% {
+    transform: translateY(-16px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes cardHover {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-4px);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-12px);
+  }
+  80% {
+    transform: translateY(-16px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
 .card_container {
+  min-width: 100%;
   padding: 2.5em;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 30px;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .card__headerContainer {
@@ -61,7 +140,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.card__footer *:hover {
+.card__footer .card__like:hover, .card__footer .card__download:hover {
   cursor: pointer;
 }
 

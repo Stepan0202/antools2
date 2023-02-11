@@ -197,18 +197,26 @@ h3{
 }
 .cards {
 }
-.cards__container {
+.cards__wrapper {
   text-align: center;
+  padding: 220px 0 200px;
 }
-
+.cards__header{
+  margin-bottom: 25px;
+}
 
 .cards__description {
   font-size: 18px;
   font-weight: 500;
   line-height: 166%;
   max-width: 440px;
-  margin: 0 auto;
+  margin: 0 auto 90px;
+}
 
+.cards__container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .cards__item {
   display: inline-block;

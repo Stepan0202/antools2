@@ -1,27 +1,87 @@
 @import "variables.scss";
 .card {
     max-width: 392px;
+    position: relative;
+    border-radius: 15px;
+    & *:not(.card__download){
+        border-radius: 15px;
+        cursor: default;
+    }
+
+    &:hover .card_container{
+        animation: cardHover 0.1s linear 1 normal running 0s forwards;
+    }
+    &:hover .card_container{
+        margin-bottom: 20px;
+    }
+    &:hover .card__button{
+        background-color: $buttonColor;
+        color: rgba(255, 255, 255, 1);
+        border-radius: 8px;
+    }
      &:hover ::before{
         content: "";
         position: absolute;
         top: 0; left: 0;
         width: 100%; height: 100%;
-        filter: blur(1px);
-        background: linear-gradient(45deg,  #283036 80%, rgba(255, 110, 48, .55)
-         100%);
-         z-index: -1;
-         border-radius: 15px;
+        background: rgba(255, 255, 255, 0.005);
+        z-index: -1;
+        overflow: hidden;
     }
-    position: relative;
+    &:hover .card_container::before{
+        content: "";
+        position: absolute;
+        top: 5%; 
+        left: 80%;
+        width: 20%; 
+        height: 21%;
+        filter: blur(25px);
+        overflow: hidden;
+        background-color: rgba(255, 110, 48, .55);
+        z-index: 0;
+    }
+    &:hover .card__header{
+        color: $headerColor
+    }
+    &:hover .card__descriptor{
+        color: $descriptionColor_active;
+    }
+    &:hover .card__text{
+        color: rgba(255, 255, 255, 0.78);
+    }
+
 }
 
+@keyframes cardHover {
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-4px);
+    }
+    40%{
+        transform: translateY(-8px);
+    }
+    60%{
+        transform: translateY(-12px);
+    }
+    80%{
+        transform: translateY(-16px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
 
 .card_container {
+    min-width: 100%;
     padding: 2.5em;
-    max-width: fit-content;
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 30px;
+    z-index: 2;
+    overflow: hidden;
 }
 .card__headerContainer{
     text-align: left;
@@ -53,7 +113,7 @@
     justify-content: space-between;
     align-items: center;
 
-    & *:hover{
+    & .card__like:hover, & .card__download:hover {
         cursor: pointer;
     }
 }
@@ -61,17 +121,7 @@
     display: flex;
     gap: 30px;
 }
-.card__like {
-
-}
-.card__download {
-}
 .card__button {
     padding: 0.56em 2.19em;
     color: rgba(255, 255, 255, 0.55);
-
-}
-.button_colorfull {
-}
-.button {
 }
