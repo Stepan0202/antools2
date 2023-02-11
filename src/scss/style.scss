@@ -71,17 +71,20 @@ body{
 
 h1{
   font-size: 50px;
-  color:rgba(255, 255, 255, 0.9);
+  color:$headerColor;;
   line-height: 140%;
 }
 
 h2{
   font-size: 48px;
   line-height: 129%;
-  color: rgba(255, 255, 255, 0.9);
+  color: $headerColor;;
 }
 
 h3{
+  font-size: 24px;
+  line-height: 150%;
+  color: $headerColor;
 
 }
 @import "header.scss";
@@ -208,6 +211,9 @@ h3{
 
 }
 .cards__item {
+  display: inline-block;
+  // max-width: fit-content;
+  max-width: 392px;
 }
 
 @import "card.scss";

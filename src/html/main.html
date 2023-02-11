@@ -25,19 +25,66 @@
         <h2 class="cards__header">Most Popular Tools</h2>
         <p class="cards__description">Tools for the best Designers and Developers most popularly used in the world</p>
         <section class="cards__container">
-            <section class="cards__item">@@include('./card.html', {
+            <section class="cards__item">
+                @@include('./card.html', {
+                "logoSrc" : "/img/logos_figma.png",
+                "logoAlt" : "Sketch logo",
+                "header" : "FIGMA",
+                "descriptor" : "Free",
+                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "buttonName" : "Visit"
+            })
+            </section>
+            <section class="cards__item">
+                @@include('./card.html', {
                 "logoSrc" : "/img/logos_sketch.png",
                 "logoAlt" : "Sketch logo",
                 "header" : "Sketch",
                 "descriptor" : "Trial & Paid",
+                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                 "buttonName" : "Visit"
             })
             </section>
-            <section class="cards__item"></section>
-            <section class="cards__item"></section>
-            <section class="cards__item"></section>
-            <section class="cards__item"></section>
-            <section class="cards__item"></section>
+            <section class="cards__item">
+                @@include('./card.html', {
+                "logoSrc" : "/img/logos_vsCode.png",
+                "logoAlt" : "Visual Studio Code logo",
+                "header" : "Visual Studio Code",
+                "descriptor" : "Free",
+                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "buttonName" : "Visit"
+            })
+            </section>
+            <section class="cards__item">
+                @@include('./card.html', {
+                "logoSrc" : "/img/logos_notion.png",
+                "logoAlt" : "Notion logo",
+                "header" : "Notion",
+                "descriptor" : "Free & Paid",
+                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "buttonName" : "Visit"
+            })
+            </section>
+            <section class="cards__item">
+                @@include('./card.html', {
+                "logoSrc" : "/img/logos_slack.png",
+                "logoAlt" : "Slack logo",
+                "header" : "Slack",
+                "descriptor" : "Free & Paid",
+                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "buttonName" : "Visit"
+            })
+            </section>
+            <section class="cards__item">
+                @@include('./card.html', {
+                "logoSrc" : "/img/logos_invision.png",
+                "logoAlt" : "Invision logo",
+                "header" : "Invision",
+                "descriptor" : "Free & Paid",
+                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "buttonName" : "Visit"
+            })
+            </section>
         </section>
     </div>
 </section>
