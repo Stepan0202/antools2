@@ -58,6 +58,7 @@ body{
   line-height: 150%;
   font-weight: 600;
   color: #FDF5FF;
+  border-radius: 8px;
 }
 .button_transparent {
   color: #FFFFFFC7;
@@ -215,13 +216,30 @@ h3{
 
 .cards__container{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 2.52vw;
 }
 .cards__item {
   display: inline-block;
   // max-width: fit-content;
   max-width: 392px;
+}
+
+.cards__button{
+  font-size: 20px;
+  line-height: 150%;
+  color: $buttonColor;
+  border: rgba(255, 255, 255, 0.1) solid 1px;
+  padding: 0.85em 1.9em;
+  margin-top: 5em;
+
+  &:hover{
+    color: $headerColor;
+    background-color: $buttonColor;
+    border-width: 5px;
+  }
+
 }
 
 @import "card.scss";

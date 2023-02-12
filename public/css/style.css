@@ -131,6 +131,7 @@ body {
   line-height: 150%;
   font-weight: 600;
   color: #FDF5FF;
+  border-radius: 8px;
 }
 
 .button_transparent {
@@ -344,13 +345,28 @@ h3 {
 
 .cards__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 2.52vw;
 }
 
 .cards__item {
   display: inline-block;
   max-width: 392px;
+}
+
+.cards__button {
+  font-size: 20px;
+  line-height: 150%;
+  color: rgb(255, 110, 48);
+  border: rgba(255, 255, 255, 0.1) solid 1px;
+  padding: 0.85em 1.9em;
+  margin-top: 5em;
+}
+.cards__button:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255, 110, 48);
+  border-width: 5px;
 }
 
 .card {
@@ -365,9 +381,6 @@ h3 {
 .card:hover .card_container {
   -webkit-animation: cardHover 0.1s linear 1 normal running 0s forwards;
           animation: cardHover 0.1s linear 1 normal running 0s forwards;
-}
-.card:hover .card_container {
-  margin-bottom: 20px;
 }
 .card:hover .card__button {
   background-color: rgb(255, 110, 48);

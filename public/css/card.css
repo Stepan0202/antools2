@@ -11,9 +11,6 @@
   -webkit-animation: cardHover 0.1s linear 1 normal running 0s forwards;
           animation: cardHover 0.1s linear 1 normal running 0s forwards;
 }
-.card:hover .card_container {
-  margin-bottom: 20px;
-}
 .card:hover .card__button {
   background-color: rgb(255, 110, 48);
   color: rgb(255, 255, 255);

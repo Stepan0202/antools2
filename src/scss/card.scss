@@ -11,9 +11,7 @@
     &:hover .card_container{
         animation: cardHover 0.1s linear 1 normal running 0s forwards;
     }
-    &:hover .card_container{
-        margin-bottom: 20px;
-    }
+
     &:hover .card__button{
         background-color: $buttonColor;
         color: rgba(255, 255, 255, 1);
