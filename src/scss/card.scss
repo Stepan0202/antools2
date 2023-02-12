@@ -7,11 +7,9 @@
         border-radius: 15px;
         cursor: default;
     }
-
     &:hover .card_container{
         animation: cardHover 0.1s linear 1 normal running 0s forwards;
     }
-
     &:hover .card__button{
         background-color: $buttonColor;
         color: rgba(255, 255, 255, 1);
@@ -47,7 +45,6 @@
     &:hover .card__text{
         color: rgba(255, 255, 255, 0.78);
     }
-
 }
 
 @keyframes cardHover {
@@ -103,6 +100,9 @@
     color: rgba(255, 165, 55, 0.55);
 }
 .card__text {
+    line-height: 188%;
+    font-weight: 400;
+    letter-spacing: 0;
     color: rgba(255, 255, 255, 0.55);
     text-align: left;
 }
@@ -122,4 +122,10 @@
 .card__button {
     padding: 0.56em 2.19em;
     color: rgba(255, 255, 255, 0.55);
+}
+.fontSize14{
+    font-size: 14px;
+}
+.fontSize16{
+    font-size: 16px;
 }

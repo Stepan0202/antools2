@@ -232,7 +232,7 @@ h3 {
 .lead__container {
   display: flex;
   justify-content: space-between;
-  max-height: 500px;
+  max-height: 600px;
   overflow-y: hidden;
   max-width: 1308px;
 }
@@ -289,7 +289,7 @@ h3 {
 }
 
 .lead__socialLinks {
-  margin-top: 20px;
+  margin-top: 110px;
 }
 
 .socialLinks {
@@ -367,6 +367,85 @@ h3 {
   color: rgba(255, 255, 255, 0.9);
   background-color: rgb(255, 110, 48);
   border-width: 5px;
+}
+
+.clients {
+  position: relative;
+  margin-bottom: 220px;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.clients .clients__container::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 10%;
+  height: 40%;
+  filter: blur(40px);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgb(255, 110, 48);
+  z-index: 0;
+}
+
+.clients__gradientBorder {
+  background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 7px, transparent 7px) 0% 0%/8px 8px no-repeat, radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px) 100% 0%/8px 8px no-repeat, radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px) 0% 100%/8px 8px no-repeat, radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100% 100%/8px 8px no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 2px) calc(100% - 16px) no-repeat, linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 2px) no-repeat, linear-gradient(112deg, rgba(255, 110, 48, 0.55) 4%, rgba(255, 110, 48, 0.1) 12%, rgba(44, 53, 61, 0.2) 26%);
+  border-radius: 8px;
+  padding: 1px;
+  box-sizing: content-box;
+  width: 100%;
+}
+
+.clients__container {
+  border-radius: 6px;
+  padding: 55px 83px;
+  background-color: rgb(44, 53, 61);
+  z-index: 0;
+  position: relative;
+}
+
+.clients__header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.clients__clientsList {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.new__container {
+  display: flex;
+}
+
+.new__header {
+  margin-bottom: 30px;
+}
+
+.new__description {
+  flex: 7 1 427px;
+  margin-bottom: 60px;
+  font-size: 18px;
+  line-height: 166%;
+}
+
+.new__button {
+  padding: 0.91em 2.2em;
+}
+
+.new__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 13 1 600px;
+}
+
+.new__cardItem {
+  max-width: 288px;
+  font-size: 14px;
 }
 
 .card {
@@ -499,6 +578,9 @@ h3 {
 }
 
 .card__text {
+  line-height: 188%;
+  font-weight: 400;
+  letter-spacing: 0;
   color: rgba(255, 255, 255, 0.55);
   text-align: left;
 }
@@ -520,6 +602,14 @@ h3 {
 .card__button {
   padding: 0.56em 2.19em;
   color: rgba(255, 255, 255, 0.55);
+}
+
+.fontSize14 {
+  font-size: 14px;
+}
+
+.fontSize16 {
+  font-size: 16px;
 }
 
 .footer__container {
