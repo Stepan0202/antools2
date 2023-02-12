@@ -1,6 +1,8 @@
 .card {
   max-width: 392px;
   position: relative;
+  display: flex;
+  justify-items: center;
   border-radius: 15px;
 }
 .card *:not(.card__download) {

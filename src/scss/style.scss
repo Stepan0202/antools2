@@ -220,7 +220,6 @@ h3{
   max-width: 392px;
   
 }
-
 .cards__button{
   font-size: 20px;
   line-height: 150%;
@@ -234,6 +233,7 @@ h3{
     border-width: 5px;
   }
 }
+@import "card.scss";
 .clients {
   position: relative;
   margin-bottom: 220px;
@@ -282,12 +282,14 @@ h3{
 }
 .clients__clientsList {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 10vw;
+  gap: 8vw;
 }
 
 .new__container {
   display: flex;
+  flex-wrap: wrap;
 }
 .new__header {
   margin-bottom: 30px;
@@ -301,7 +303,6 @@ h3{
 .new__button {
   padding: 0.91em 2.2em;
 }
-
 .new__cards {
   display: flex;
   flex-wrap: wrap;
@@ -312,7 +313,57 @@ h3{
   max-width: 288px;
   font-size: 14px;
 }
+.slider {
+}
+.slider__container {
+  display: flex;
+  background: url(/img/“.png) 45% 30%no-repeat;
+}
 
-@import "card.scss";
+.slider__left, .slider__right {
+  align-self: center;
+}
+.slider__right {
+}
+.slider__content {
+  padding: 0 10vw;
+}
+.slider__item {
+  display: flex;
+}
+.slider__photoContainer {
+  position: relative;
+}
+.slider__table {
+  position: absolute;
+  bottom: 2%;
+  right: 0%;
+  background-color: rgba(40, 48, 54, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 8px;
+  padding: 0.5em 1.45em;
+  
+}
+.table {
+}
+.table__name {
+  font-size: 26px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+
+}
+.table__info {
+  font-size: 16px;
+  line-height: 150%;
+
+}
+.slider__text {
+  font-size: 14px;
+  line-height: 214%;
+  letter-spacing: 0.015em;
+  align-self: center;
+}
+
+
 
 @import "footer.scss";

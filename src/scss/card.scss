@@ -2,7 +2,10 @@
 .card {
     max-width: 392px;
     position: relative;
+    display: flex;
+    justify-items: center;
     border-radius: 15px;
+    
     & *:not(.card__download){
         border-radius: 15px;
         cursor: default;
