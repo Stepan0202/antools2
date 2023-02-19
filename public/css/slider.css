@@ -75,3 +75,30 @@
   background: url(/img/“.png) 0% 0% no-repeat;
   overflow: visible;
 }
+
+.slider__lines {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.slider__line {
+  min-height: 8px;
+  min-width: 44px;
+  width: 44px;
+  min-width: 20px;
+  border-radius: 4px;
+}
+.slider__line:hover {
+  cursor: pointer;
+}
+
+.slider__line_disabled {
+  background-color: rgb(40, 48, 54);
+  border: 1px solid gray;
+}
+
+.slider__line_active {
+  background-color: rgb(255, 110, 48);
+}
