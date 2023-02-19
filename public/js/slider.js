@@ -1,3 +1,4 @@
+
 const leftArrow = document.querySelector(".slider__left");
 const rightArrow = document.querySelector(".slider__right");
 const sliderItems = document.querySelectorAll(".slider__item");
@@ -8,19 +9,28 @@ sliderItems.forEach((slide,indx) => {
     slide.style = `transform: translateX(${indx * 100}%)`
 });
 
-rightArrow.addEventListener("click", (e) => {
-    currentPosition -= 100;
-    sliderItems.forEach((slide,indx) => {
-        slide.style = `transform: translateX(${(indx * currentPosition) - 100}%)`;
-        console.log(`(indx * currentPosition) - 100: ${(indx * currentPosition) - 100}`);
-        console.log(`current position: ${currentPosition}`);
-        console.dir(slide);
-    });
- 
-})
-leftArrow.addEventListener("click", (e) => {
+rightArrow.addEventListener("click", () => {
     currentPosition++;
-    sliderItems.forEach((slide,indx) => {
-        slide.style = `transform: translateX(${(indx+currentPosition) * 100}%)`
+    if (currentPosition >= sliderItems.length) {
+      currentPosition = 0;
+    }
+    sliderItems.forEach((item, indx) => {
+      const position = indx - currentPosition;
+      item.style.transform = `translateX(${position * 100}%)`;
     });
-})
+  });
+  
+  leftArrow.addEventListener("click", () => {
+    currentPosition--;
+    if (currentPosition < 0) {
+      currentPosition = sliderItems.length - 1;
+    }
+    sliderItems.forEach((item, indx) => {
+      const position = indx - currentPosition;
+      item.style.transform = `translateX(${position * 100}%)`;
+    });
+  });
+/*
+ step 1: 0%, 100%, 200%
+ step
+*/
