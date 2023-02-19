@@ -133,6 +133,9 @@ body {
   color: #FDF5FF;
   border-radius: 8px;
 }
+.button:hover {
+  cursor: pointer;
+}
 
 .button_transparent {
   color: rgba(255, 255, 255, 0.7803921569);
@@ -618,23 +621,46 @@ h3 {
 
 .slider__container {
   display: flex;
-  background: url(/img/“.png) 45% 30% no-repeat;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .slider__left, .slider__right {
   align-self: center;
+  position: absolute;
+  top: 50%;
+  padding: 1em;
+  border-radius: 8px;
+  z-index: 2;
+}
+.slider__left:hover, .slider__right:hover {
+  cursor: pointer;
+  background-color: rgb(255, 110, 48);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.slider__right {
+  right: 0;
 }
 
 .slider__content {
   padding: 0 10vw;
+  display: flex;
+  height: 492px;
+  gap: 6vw;
 }
 
 .slider__item {
   display: flex;
+  width: 80vw;
+  padding: 0 10vw 0 0;
+  position: absolute;
+  transition: all 2s linear;
 }
 
 .slider__photoContainer {
   position: relative;
+  flex: 2 2 540px;
 }
 
 .slider__table {
@@ -664,6 +690,10 @@ h3 {
   line-height: 214%;
   letter-spacing: 0.015em;
   align-self: center;
+  padding: 3em 0 0 3em;
+  flex: 1 1 500px;
+  background: url(/img/“.png) 0% 0% no-repeat;
+  overflow: visible;
 }
 
 .footer__container {
