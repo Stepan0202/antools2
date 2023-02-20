@@ -723,6 +723,51 @@ h3 {
   background-color: rgb(255, 110, 48);
 }
 
+.leadForm__container {
+  text-align: center;
+}
+
+.leadForm__tagline {
+  width: 80%;
+  max-width: 470px;
+  margin: 25px auto;
+  font-size: 18px;
+  line-height: 166%;
+}
+
+.leadForm__form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 549px;
+  margin: 100px auto;
+  padding: 0.5em 0.75em 0.5em 1.5em;
+  border-radius: 15px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid rgba(255, 255, 255, 0.1) 1.5px;
+}
+
+.leadForm__search {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.leadForm__submitButton {
+  display: inline-block;
+  max-height: 48px;
+  padding: 0.75em 2.25em;
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+input {
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.38);
+}
+
 .footer__container {
   display: flex;
   justify-content: center;

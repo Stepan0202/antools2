@@ -96,8 +96,6 @@ h3{
   display: flex;
   justify-content: flex-end;
 }
-.container {
-}
 .lead__container {
   display: flex;
   justify-content: space-between;
@@ -134,27 +132,21 @@ h3{
   align-items: center;
   border-radius: 8px;
   padding: 0 2% 0 3%;
-
   &::before{
     content: url(/img/icons/search.png);
   }
-
 }
-
 .lead__search {
   min-height: 64px;
   background-color: rgba(255, 255, 255, 0);
   flex: 3 3 auto;
   padding-left: 1em;
-
 }
-
 .lead__searchButton{
   padding: 12px 36.12px;
   flex: 1 1 130px;
   max-height: 66%;
 }
-
 .lead__socialLinks {
   margin-top: 110px;
 }
@@ -185,16 +177,11 @@ h3{
   }
   &:hover img{
     opacity: 0%;
-    
   }
 }
 .lead__imageContainer {
   flex: 11 11 auto;
   text-align: end;
-}
-.lead__img {
-}
-.cards {
 }
 .cards__wrapper {
   text-align: center;
@@ -203,7 +190,6 @@ h3{
 .cards__header{
   margin-bottom: 25px;
 }
-
 .cards__description {
   font-size: 18px;
   font-weight: 500;
@@ -211,7 +197,6 @@ h3{
   max-width: 440px;
   margin: 0 auto 90px;
 }
-
 .cards__container{
   display: flex;
   justify-content: flex-start;
@@ -221,7 +206,6 @@ h3{
 .cards__item {
   display: inline-block;
   max-width: 392px;
-  
 }
 .cards__button{
   font-size: 20px;
@@ -316,6 +300,49 @@ h3{
   max-width: 288px;
   font-size: 14px;
 }
-
 @import "slider.scss";
+.leadForm {
+}
+.leadForm__container {
+  text-align: center;
+  
+}
+.leadForm__header {
+}
+.leadForm__tagline {
+  width: 80%;
+  max-width: 470px;
+  margin: 25px auto;
+  font-size: 18px;
+  line-height: 166%;
+}
+.leadForm__form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 549px;
+  margin: 100px auto;
+  padding: 0.5em 0.75em 0.5em 1.5em;
+  border-radius: 15px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid rgba(255, 255, 255, 0.1) 1.5px;
+}
+.leadForm__search {
+  width: max-content;
+}
+
+.leadForm__submitButton {
+  display: inline-block;
+  max-height: 48px;
+  padding: 0.75em 2.25em;
+  flex: 0 0 auto;
+  align-self: center;
+
+}
+input{
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.38);
+}
 @import "footer.scss";
