@@ -1,5 +1,5 @@
 .card {
-  max-width: 392px;
+  max-width: 355px;
   position: relative;
   display: flex;
   justify-items: center;
@@ -17,6 +17,7 @@
   background-color: rgb(255, 110, 48);
   color: rgb(255, 255, 255);
   border-radius: 8px;
+  cursor: pointer;
 }
 .card:hover ::before {
   content: "";

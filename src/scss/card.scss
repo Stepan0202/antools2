@@ -1,6 +1,6 @@
 @import "variables.scss";
 .card {
-    max-width: 392px;
+    max-width: 355px;
     position: relative;
     display: flex;
     justify-items: center;
@@ -17,6 +17,7 @@
         background-color: $buttonColor;
         color: rgba(255, 255, 255, 1);
         border-radius: 8px;
+        cursor: pointer;
     }
      &:hover ::before{
         content: "";

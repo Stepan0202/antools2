@@ -1,11 +1,49 @@
+@import 'variables.scss';
 .footer {
+    margin-top: 240px;
+    padding-bottom: 98px;
+
 }
 .footer__container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 56.59px;
+    justify-content: space-between;
+    padding-right: 10vw;
+
+}
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 190px;
+        ul, nav{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 20px;
+            flex: 1 1 90%;
+            font-size: 16px;
+        }
+}
+.footer__header{
+    font-size: 20px;
+    flex: 0 0 min-content;
+}
+.footer__column_1 {
+    flex: 0 1 260px;
 }
 
-.footer__image {
+.footer__copyright{
+    color: $headerColor;
+}
+.footer__lawInfo{
+    font-weight: 400;
+}
+.footer__column_2 {
+    flex: 0 1 200px;
+}
+.footer__column_3 {
+    flex: 0 1 180px;
+}
+.footer__column_4 {
+    flex: 0 1 170px;
 }

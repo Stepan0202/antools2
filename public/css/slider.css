@@ -35,7 +35,7 @@
   width: 80vw;
   padding: 0 10vw 0 0;
   position: absolute;
-  transition: all 2s linear;
+  transition: all 0.5s ease-out;
 }
 
 .slider__photoContainer {
@@ -95,8 +95,7 @@
 }
 
 .slider__line_disabled {
-  background-color: rgb(40, 48, 54);
-  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .slider__line_active {

@@ -122,7 +122,7 @@ body {
 }
 
 .container {
-  width: 92.2807017544%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -165,8 +165,29 @@ h3 {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.logo {
+  display: flex;
+  border-radius: 9px;
+  overflow: hidden;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.logo__img {
+  border-radius: 9px;
+}
+
 .header {
-  margin-top: 50px;
+  position: fixed;
+  padding: 1em 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #283036;
 }
 
 .header__container {
@@ -176,25 +197,7 @@ h3 {
   justify-content: space-between;
 }
 
-.header__logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 22px;
-  line-height: 150%;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.logo {
-  border-radius: 9px;
-  overflow: hidden;
-}
-
-.logo__img {
-  border-radius: 9px;
-}
-
-.header__menu {
+.menu__list {
   display: flex;
   gap: 2.5em;
   justify-content: center;
@@ -230,6 +233,7 @@ h3 {
 .lead {
   display: flex;
   justify-content: flex-end;
+  padding-top: 100px;
 }
 
 .lead__container {
@@ -373,7 +377,7 @@ h3 {
 }
 
 .card {
-  max-width: 392px;
+  max-width: 355px;
   position: relative;
   display: flex;
   justify-items: center;
@@ -391,6 +395,7 @@ h3 {
   background-color: rgb(255, 110, 48);
   color: rgb(255, 255, 255);
   border-radius: 8px;
+  cursor: pointer;
 }
 .card:hover ::before {
   content: "";
@@ -655,7 +660,7 @@ h3 {
   width: 80vw;
   padding: 0 10vw 0 0;
   position: absolute;
-  transition: all 2s linear;
+  transition: all 0.5s ease-out;
 }
 
 .slider__photoContainer {
@@ -715,12 +720,15 @@ h3 {
 }
 
 .slider__line_disabled {
-  background-color: rgb(40, 48, 54);
-  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .slider__line_active {
   background-color: rgb(255, 110, 48);
+}
+
+.leadForm {
+  margin-top: 251px;
 }
 
 .leadForm__container {
@@ -768,9 +776,57 @@ input {
   color: rgba(255, 255, 255, 0.38);
 }
 
+.footer {
+  margin-top: 240px;
+  padding-bottom: 98px;
+}
+
 .footer__container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 56.59px;
+  justify-content: space-between;
+  padding-right: 10vw;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 190px;
+}
+.footer__column ul, .footer__column nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  flex: 1 1 90%;
+  font-size: 16px;
+}
+
+.footer__header {
+  font-size: 20px;
+  flex: 0 0 min-content;
+}
+
+.footer__column_1 {
+  flex: 0 1 260px;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer__lawInfo {
+  font-weight: 400;
+}
+
+.footer__column_2 {
+  flex: 0 1 200px;
+}
+
+.footer__column_3 {
+  flex: 0 1 180px;
+}
+
+.footer__column_4 {
+  flex: 0 1 170px;
 }

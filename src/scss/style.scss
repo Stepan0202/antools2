@@ -11,7 +11,6 @@ a:link {
     line-height: 150%;
     letter-spacing: 0.14em;
   }
-
   a:visited {
     color: $textColor;
     font-style: normal;
@@ -27,7 +26,6 @@ a:link {
     line-height: 150%;
     letter-spacing: 0.14em;
   }
-
 body{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -91,10 +89,24 @@ h3{
   color: $headerColor;
 
 }
+.logo {
+  display: flex;
+  border-radius: 9px;
+  overflow: hidden;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  line-height: 150%;
+  color: $headerColor;
+}
+.logo__img {
+  border-radius: 9px;
+}
 @import "header.scss";
 .lead {
   display: flex;
   justify-content: flex-end;
+  padding-top: 100px;
 }
 .lead__container {
   display: flex;
@@ -302,6 +314,7 @@ h3{
 }
 @import "slider.scss";
 .leadForm {
+  margin-top: 251px;
 }
 .leadForm__container {
   text-align: center;

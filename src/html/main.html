@@ -1,182 +1,183 @@
-<section class="lead">
-    <div class="lead__container">
-        <div class="lead__description">
-            <h1 class="lead__header">Awesome tools for
-                Designer & Developer<span class="colorText">.</span></h1>
-            <p class="lead__text">Antool is a web collection of information on paid or free Design and Development tools</p>
-            <form action="#" class="lead__searchForm input" id="searchForm">
-                <input type="text" class="lead__search" placeholder="find more than 430+ tools...">
-                <button type="submit" class="button button_colorfull lead__searchButton">Search</button>
-            </form>
-            <div class="lead__socialLinks socialLinks">
-                <a href="google.com" class="fbIconLink socialLink"><img src="/img/icons/fb_link.png" alt="Link to our Facebook page"></a>
-                <a href="#" class="instaIconLink socialLink"><img src="/img/icons/insta_link.jpg" alt="link to our Instagram page"></a>
-                <a href="#" class="twitterIconLink socialLink"><img src="/img/icons/twitter_link.jpg" alt="link to our Twitter page"></a>
+<main class="main">
+    <section class="lead">
+        <div class="lead__container container">
+            <div class="lead__description">
+                <h1 class="lead__header">Awesome tools for
+                    Designer & Developer<span class="colorText">.</span></h1>
+                <p class="lead__text">Antool is a web collection of information on paid or free Design and Development tools</p>
+                <form action="#" class="lead__searchForm input" id="searchForm">
+                    <input type="text" class="lead__search" placeholder="find more than 430+ tools...">
+                    <button type="submit" class="button button_colorfull lead__searchButton">Search</button>
+                </form>
+                <div class="lead__socialLinks socialLinks">
+                    <a href="google.com" class="fbIconLink socialLink"><img src="/img/icons/fb_link.png" alt="Link to our Facebook page"></a>
+                    <a href="#" class="instaIconLink socialLink"><img src="/img/icons/insta_link.jpg" alt="link to our Instagram page"></a>
+                    <a href="#" class="twitterIconLink socialLink"><img src="/img/icons/twitter_link.jpg" alt="link to our Twitter page"></a>
+                </div>
             </div>
-        </div>
-        <div class="lead__imageContainer">
-            <img src="/img/lead__img.png" alt="" class="lead__img">
-        </div>
+            <div class="lead__imageContainer">
+                <img src="/img/lead__img.png" alt="" class="lead__img">
+            </div>
 
-    </div>
-</section>
-<section class="cards">
-    <div class="cards__wrapper container">
-        <h2 class="cards__header">Most Popular Tools</h2>
-        <p class="cards__description">Tools for the best Designers and Developers most popularly used in the world</p>
-        <section class="cards__container">
-            <section class="cards__item">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_figma.png",
-                "logoAlt" : "Sketch logo",
-                "header" : "FIGMA",
-                "descriptor" : "Free",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit",
-                "fontSize" : "16"
-            })
+        </div>
+    </section>
+    <section class="cards">
+        <div class="cards__wrapper container">
+            <h2 class="cards__header">Most Popular Tools</h2>
+            <p class="cards__description">Tools for the best Designers and Developers most popularly used in the world</p>
+            <section class="cards__container">
+                <section class="cards__item">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_figma.png",
+                    "logoAlt" : "Sketch logo",
+                    "header" : "FIGMA",
+                    "descriptor" : "Free",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit",
+                    "fontSize" : "16"
+                })
+                </section>
+                <section class="cards__item">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_sketch.png",
+                    "logoAlt" : "Sketch logo",
+                    "header" : "Sketch",
+                    "descriptor" : "Trial & Paid",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit",
+                    "fontSize" : "16"
+                })
+                </section>
+                <section class="cards__item">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_vsCode.png",
+                    "logoAlt" : "Visual Studio Code logo",
+                    "header" : "Visual Studio Code",
+                    "descriptor" : "Free",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit",
+                    "fontSize" : "16"
+                })
+                </section>
+                <section class="cards__item">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_notion.png",
+                    "logoAlt" : "Notion logo",
+                    "header" : "Notion",
+                    "descriptor" : "Free & Paid",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit",
+                    "fontSize" : "16"
+                })
+                </section>
+                <section class="cards__item">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_slack.png",
+                    "logoAlt" : "Slack logo",
+                    "header" : "Slack",
+                    "descriptor" : "Free & Paid",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit",
+                    "fontSize" : "16"            
+                })
+                </section>
+                <section class="cards__item">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_invision.png",
+                    "logoAlt" : "Invision logo",
+                    "header" : "Invision",
+                    "descriptor" : "Free & Paid",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit",
+                    "fontSize" : "16"
+                })
+                </section>
             </section>
-            <section class="cards__item">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_sketch.png",
-                "logoAlt" : "Sketch logo",
-                "header" : "Sketch",
-                "descriptor" : "Trial & Paid",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit",
-                "fontSize" : "16"
-            })
-            </section>
-            <section class="cards__item">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_vsCode.png",
-                "logoAlt" : "Visual Studio Code logo",
-                "header" : "Visual Studio Code",
-                "descriptor" : "Free",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit",
-                "fontSize" : "16"
-            })
-            </section>
-            <section class="cards__item">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_notion.png",
-                "logoAlt" : "Notion logo",
-                "header" : "Notion",
-                "descriptor" : "Free & Paid",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit",
-                "fontSize" : "16"
-            })
-            </section>
-            <section class="cards__item">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_slack.png",
-                "logoAlt" : "Slack logo",
-                "header" : "Slack",
-                "descriptor" : "Free & Paid",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit",
-                "fontSize" : "16"            
-            })
-            </section>
-            <section class="cards__item">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_invision.png",
-                "logoAlt" : "Invision logo",
-                "header" : "Invision",
-                "descriptor" : "Free & Paid",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit",
-                "fontSize" : "16"
-            })
-            </section>
-        </section>
-        <button class="button button__transparent cards__button">Load more</button>
-    </div>
-</section>
-<section class="clients container">
-    <div class="clients__gradientBorder">
-        <div class="clients__container">
-            <h3 class="clients__header">Trusted more than 150+ brand</h3>
-            <div class="clients__clientsList">
-                <div class="clients__imgContainer">
-                    <img src="/img/logos_microsoft.png" alt="" class="clients__logo">
-                </div>
-                <div class="clients__imgContainer">
-                    <img src="/img/logos_google.png" alt="" class="clients__logo">
-                </div>
-                <div class="clients__imgContainer">
-                    <img src="/img/logos_slack_full_gray.png" alt="" class="clients__logo">
-                </div>
-                <div class="clients__imgContainer">
-                    <img src="/img/logos_wordpress.png" alt="" class="clients__logo">
+            <button class="button button__transparent cards__button">Load more</button>
+        </div>
+    </section>
+    <section class="clients container">
+        <div class="clients__gradientBorder">
+            <div class="clients__container">
+                <h3 class="clients__header">Trusted more than 150+ brand</h3>
+                <div class="clients__clientsList">
+                    <div class="clients__imgContainer">
+                        <img src="/img/logos_microsoft.png" alt="" class="clients__logo">
+                    </div>
+                    <div class="clients__imgContainer">
+                        <img src="/img/logos_google.png" alt="" class="clients__logo">
+                    </div>
+                    <div class="clients__imgContainer">
+                        <img src="/img/logos_slack_full_gray.png" alt="" class="clients__logo">
+                    </div>
+                    <div class="clients__imgContainer">
+                        <img src="/img/logos_wordpress.png" alt="" class="clients__logo">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="new">
-    <div class="new__container container">
-        <div class="new__description">
-            <h2 class="new__header">Newcomer Tools</h2>
-            <p class="new__description">Wow! see the latest update of the most recommended tools from reliable designers and developers</p>
-            <button class="button button_colorfull new__button">Explore more</button>
+    </section>
+    <section class="new">
+        <div class="new__container container">
+            <div class="new__description">
+                <h2 class="new__header">Newcomer Tools</h2>
+                <p class="new__description">Wow! see the latest update of the most recommended tools from reliable designers and developers</p>
+                <button class="button button_colorfull new__button">Explore more</button>
+            </div>
+            <div class="new__cards">
+                <section class="new__cardItem">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_zeplin.png",
+                    "logoAlt" : "Sketch logo",
+                    "header" : "Zeplin",
+                    "descriptor" : "Free",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit",
+                    "fontSize" : "14"
+                })
+                </section>
+                <section class="new__cardItem">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_phpstorm.png",
+                    "logoAlt" : "Sketch logo",
+                    "header" : "PHPStorm",
+                    "descriptor" : "Free",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit"
+                })
+                </section>
+                <section class="new__cardItem">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_toolbox.png",
+                    "logoAlt" : "Sketch logo",
+                    "header" : "Toolbox",
+                    "descriptor" : "Free",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit"
+                })
+                </section>
+                <section class="new__cardItem">
+                    @@include('./card.html', {
+                    "logoSrc" : "/img/logos_procreate.png",
+                    "logoAlt" : "Sketch logo",
+                    "header" : "Procreate",
+                    "descriptor" : "Free",
+                    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                    "buttonName" : "Visit"
+                })
+                </section>
+            </div>
         </div>
-        <div class="new__cards">
-            <section class="new__cardItem">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_zeplin.png",
-                "logoAlt" : "Sketch logo",
-                "header" : "Zeplin",
-                "descriptor" : "Free",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit",
-                "fontSize" : "14"
-            })
-            </section>
-            <section class="new__cardItem">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_phpstorm.png",
-                "logoAlt" : "Sketch logo",
-                "header" : "PHPStorm",
-                "descriptor" : "Free",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit"
-            })
-            </section>
-            <section class="new__cardItem">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_toolbox.png",
-                "logoAlt" : "Sketch logo",
-                "header" : "Toolbox",
-                "descriptor" : "Free",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit"
-            })
-            </section>
-            <section class="new__cardItem">
-                @@include('./card.html', {
-                "logoSrc" : "/img/logos_procreate.png",
-                "logoAlt" : "Sketch logo",
-                "header" : "Procreate",
-                "descriptor" : "Free",
-                "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                "buttonName" : "Visit"
-            })
-            </section>
+    </section>
+    @@include("./slider.html")
+    <section class="leadForm">
+        <div class="leadForm__container container">
+            <h2 class="leadForm__header">Become a contributor?</h2>
+            <p class="leadForm__tagline">Join us and get tips & tricks to become a great Designer and Developer</p>
+            <form action="" class="leadForm__form">
+                <input type="text" class="leadForm__search lead__search" placeholder="Enter your email...">
+                <button type="submit" class="button button_colorfull leadForm__submitButton">Join Us</button>
+            </form>
         </div>
-    </div>
-</section>
-@@include("./slider.html")
-<section class="leadForm">
-    <div class="leadForm__container container">
-        <h2 class="leadForm__header">Become a contributor?</h2>
-        <p class="leadForm__tagline">Join us and get tips & tricks to become a great Designer and Developer</p>
-        <form action="" class="leadForm__form">
-            <input type="text" class="leadForm__search lead__search" placeholder="Enter your email...">
-            <button type="submit" class="button button_colorfull leadForm__submitButton">Join Us</button>
-        </form>
-    </div>
-</section>
-@@include("./footer.html")
+    </section>
+</main>

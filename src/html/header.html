@@ -1,23 +1,29 @@
 <header class="header">
-    <div class="header__wrapper">
         <div class="header__container container">
             <div class="header__logo logo">
                 <img src="/img/logo.jpg" alt="" class="logo__img">
                 <p class="logo__name">antools.</p>
             </div>
-            <nav class="header__menu menu">
-                <li class="menu__item"> <a href="">Home</a></li>
-                <li class="menu__item menu__item_drop"><a href="">Categories</a>
-                    <ul class="dropMenu">
-                        <li class="dropMenu__item dropable"><a href="">Programming</a></li>
-                        <li class="dropMenu__item dropable"><a href="">Design</a></li>
-                        <li class="dropMenu__item dropable"><a href="">Managment</a></li>
-                        <li class="dropMenu__item dropable"><a href="">Command work</a></li>
+            <div class="header__menu menu">
+                <div class="menu__icon">
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item"> <a class="menu__link" href="">Home</a></li>
+                        <li class="menu__item menu__item_drop"><a class="menu__link" href="">Categories</a>
+                            <ul class="dropMenu">
+                                <li class="dropMenu__item dropable"><a class="menu__link" href="">Programming</a></li>
+                                <li class="dropMenu__item dropable"><a class="menu__link" href="">Design</a></li>
+                                <li class="dropMenu__item dropable"><a class="menu__link" href="">Managment</a></li>
+                                <li class="dropMenu__item dropable"><a class="menu__link" href="">Command work</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a class="menu__link" href="">My Collections</a></li>
+                        <li class="menu__item"><a class="menu__link" href="">Blog</a></li>
                     </ul>
-                </li>
-                <li class="menu__item"><a href="">My Collections</a></li>
-                <li class="menu__item"><a href="">Blog</a></li>
-            </nav>
+                </nav>
+            </div>
             <div class="header__controls">
                 <button class="button button_transparent login header__login">
                     Login
@@ -27,5 +33,4 @@
                 </button>
             </div>
         </div>
-    </div>
 </header> 
