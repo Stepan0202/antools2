@@ -197,29 +197,35 @@ h3 {
   justify-content: space-between;
 }
 
-.menu__list {
-  display: flex;
-  gap: 2.5em;
-  justify-content: center;
+.menu__item {
+  position: relative;
 }
 
 .menu__item_drop {
   position: relative;
 }
-.menu__item_drop::after {
+.menu__item_drop > .menu__link:after {
   content: ">";
   position: absolute;
-  top: 0.2em;
-  transform: rotate(90deg);
-  font-size: 1.5em;
+  padding: 0 20px;
+  font-size: 1.25em;
+  transform: rotate(90deg) translateY(20px);
 }
 .menu__item_drop:hover::after {
   cursor: pointer;
   color: rgb(255, 110, 48);
 }
+.menu__item_drop:hover::after .menu__item_drop {
+  cursor: pointer;
+  color: rgb(255, 110, 48);
+}
 
 .dropMenu {
-  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 1em;
+  border-radius: 8px;
 }
 
 .login {
@@ -230,6 +236,37 @@ h3 {
   padding: 0.75em 1.75em;
 }
 
+/*------------------------*/
+body._pc .menu__list .menu__item_drop:hover .dropMenu {
+  opacity: 100;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  pointer-events: all;
+}
+
+/*------------------------*/
+@media (min-width: 767px) {
+  .menu__list {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    justify-content: center;
+  }
+
+  .menu__item {
+    padding: 10px 0;
+  }
+
+  .dropMenu {
+    opacity: 0;
+    visibility: hidden;
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    pointer-events: none;
+    transform: translate(0px, 10%);
+  }
+}
 .lead {
   display: flex;
   justify-content: flex-end;
