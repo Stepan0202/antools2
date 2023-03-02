@@ -21,3 +21,12 @@ const isMobile = {
 };
 if (isMobile.any()) document.body.classList.add("_touch");
 else document.body.classList.add("_pc");
+let menuArrows = document.querySelectorAll(".menu__arrow");
+if(menuArrows.length > 0){
+    menuArrows.forEach(element => {
+        element.addEventListener("click", showMenu);
+    });
+}
+function showMenu(e){
+    e.target.parentNode.classList.toggle("_active");
+}
