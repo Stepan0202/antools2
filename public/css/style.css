@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+/*----COMMON START----*/
 a:link {
   color: rgba(255, 255, 255, 0.55);
   font-style: normal;
@@ -180,6 +181,13 @@ h3 {
   border-radius: 9px;
 }
 
+input {
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+/*----COMMON END----*/
 .header {
   padding: 1em 0;
   top: 0;
@@ -397,6 +405,7 @@ body._touch .menu__arrow._active + .dropMenu {
     top: -6px;
   }
 }
+/*-----LEAD START-----*/
 .lead {
   display: flex;
   justify-content: flex-end;
@@ -450,6 +459,7 @@ body._touch .menu__arrow._active + .dropMenu {
 }
 
 .lead__search {
+  display: inline-block;
   min-height: 64px;
   background-color: rgba(255, 255, 255, 0);
   flex: 3 3 auto;
@@ -500,6 +510,39 @@ body._touch .menu__arrow._active + .dropMenu {
   text-align: end;
 }
 
+@media (max-width: 767px) {
+  .lead__container {
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+    max-width: 1308px;
+    padding-top: 0;
+  }
+
+  .lead {
+    background: url("/img/lead__img.png") 50%/contain no-repeat;
+    padding-top: 0;
+  }
+
+  .lead__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 9 9 600px;
+    padding: 5vh 0 0;
+  }
+
+  .lead__imageContainer {
+    display: none;
+  }
+
+  .lead__searchButton {
+    padding: 12px 15px;
+  }
+}
+/*-----LEAD END-----*/
+/*-----CARDS START-----*/
 .cards__wrapper {
   text-align: center;
   padding: 220px 0 200px;
@@ -710,9 +753,30 @@ body._touch .menu__arrow._active + .dropMenu {
   font-size: 16px;
 }
 
+@media (max-width: 767px) {
+  .card {
+    border: solid 1px rgba(255, 255, 255, 0.2);
+  }
+  .card:hover {
+    border: none;
+    margin: 10% 0 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .cards__wrapper {
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+
+  .cards__button {
+    margin: 2em 0;
+  }
+}
+/*-----CARDS END-----*/
+/*-----CLIENTS START-----*/
 .clients {
   position: relative;
-  margin-bottom: 220px;
+  margin-bottom: 36vh;
   z-index: 1;
   overflow: hidden;
   border-radius: 8px;
@@ -759,6 +823,13 @@ body._touch .menu__arrow._active + .dropMenu {
   gap: 8vw;
 }
 
+@media (max-width: 767px) {
+  .clients {
+    margin-bottom: 20vh;
+  }
+}
+/*-----CLIENTS END-----*/
+/*-----NEW START-----*/
 .new__container {
   display: flex;
   flex-wrap: wrap;
@@ -791,6 +862,16 @@ body._touch .menu__arrow._active + .dropMenu {
   font-size: 14px;
 }
 
+@media (max-width: 767px) {
+  .new__header, .new__description {
+    text-align: center;
+  }
+
+  .new__cards {
+    justify-content: center;
+  }
+}
+/*-----NEW END-----*/
 .slider__container {
   display: flex;
   overflow-x: hidden;
@@ -811,20 +892,28 @@ body._touch .menu__arrow._active + .dropMenu {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.slider__left {
+  transform: translateY(-50%);
+}
+
 .slider__right {
   right: 0;
+  top: 100;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .slider__content {
   padding: 0 10vw;
   display: flex;
-  height: 492px;
+  height: 70vh;
+  overflow: visible;
   gap: 6vw;
 }
 
 .slider__item {
   display: flex;
   width: 80vw;
+  height: 80%;
   padding: 0 10vw 0 0;
   position: absolute;
   transition: all 0.5s ease-out;
@@ -838,7 +927,7 @@ body._touch .menu__arrow._active + .dropMenu {
 .slider__table {
   position: absolute;
   bottom: 2%;
-  right: 0%;
+  left: 12%;
   background-color: rgba(40, 48, 54, 0.2);
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
@@ -858,10 +947,12 @@ body._touch .menu__arrow._active + .dropMenu {
 }
 
 .slider__text {
+  display: flex;
   font-size: 14px;
   line-height: 214%;
   letter-spacing: 0.015em;
   align-self: center;
+  align-items: center;
   padding: 3em 0 0 3em;
   flex: 1 1 500px;
   background: url(/img/“.png) 0% 0% no-repeat;
@@ -894,6 +985,43 @@ body._touch .menu__arrow._active + .dropMenu {
   background-color: rgb(255, 110, 48);
 }
 
+@media (max-width: 995px) {
+  .slider {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider__container {
+    margin-top: 20vh;
+  }
+
+  .slider__item {
+    display: flex;
+    flex-direction: column;
+    background: url("/img/photo__RonaldRichards.png") 50% 30%/contain no-repeat;
+    top: 0px;
+  }
+
+  .slider__photoContainer {
+    display: none;
+  }
+
+  .slider__text {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #283036;
+    border-radius: 8px;
+  }
+
+  .slider__table {
+    position: relative;
+  }
+
+  .slider__lines {
+    margin-top: 0;
+    flex: 1 1 auto;
+  }
+}
+/*-----LEADFORM START-----*/
 .leadForm {
   margin-top: 251px;
 }
@@ -937,12 +1065,7 @@ body._touch .menu__arrow._active + .dropMenu {
   align-self: center;
 }
 
-input {
-  font-size: 14px;
-  line-height: 150%;
-  color: rgba(255, 255, 255, 0.38);
-}
-
+/*-----LEADFORM END-----*/
 .footer {
   margin-top: 240px;
   padding-bottom: 98px;
@@ -950,8 +1073,9 @@ input {
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
-  padding-right: 10vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__column {

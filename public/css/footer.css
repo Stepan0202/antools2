@@ -5,8 +5,9 @@
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
-  padding-right: 10vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__column {

@@ -2,7 +2,7 @@
 @import "fonts.scss";
 @import "variables.scss";
 
-   
+/*----COMMON START----*/
 a:link {
     color: $textColor;
     font-style: normal;
@@ -41,16 +41,13 @@ body{
     display: flex;
     flex-direction: column;
 }
-
 .main{
   flex: 1 0 auto;
 }
-
 .container{
     width: $container;
     margin: 0 auto;
 }
-
 .button {
   font-size: 16px;
   line-height: 150%;
@@ -65,29 +62,24 @@ body{
   color: #FFFFFFC7;
   background-color: none;
 }
-
 .button_colorfull {
   border-radius: 6px;
   background-color: $buttonColor;
 }
-
 h1{
   font-size: 50px;
   color:$headerColor;;
   line-height: 140%;
 }
-
 h2{
   font-size: 48px;
   line-height: 129%;
   color: $headerColor;;
 }
-
 h3{
   font-size: 24px;
   line-height: 150%;
   color: $headerColor;
-
 }
 .logo {
   display: flex;
@@ -102,7 +94,14 @@ h3{
 .logo__img {
   border-radius: 9px;
 }
+input{
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.38);
+}
+/*----COMMON END----*/
 @import "header.scss";
+/*-----LEAD START-----*/
 .lead {
   display: flex;
   justify-content: flex-end;
@@ -115,6 +114,7 @@ h3{
   overflow-y: hidden;
   max-width: 1308px;
 }
+
 .lead__description {
   display: flex;
   flex-direction: column;
@@ -149,6 +149,7 @@ h3{
   }
 }
 .lead__search {
+  display: inline-block;
   min-height: 64px;
   background-color: rgba(255, 255, 255, 0);
   flex: 3 3 auto;
@@ -195,6 +196,36 @@ h3{
   flex: 11 11 auto;
   text-align: end;
 }
+@media (max-width: 767px) {
+  .lead__container {
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+    max-width: 1308px;
+    padding-top: 0;
+  }
+  .lead{
+    background: url('/img/lead__img.png') 50%/contain no-repeat;
+    padding-top: 0;
+  }
+  .lead__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 9 9 600px;
+    padding: 5vh 0 0;
+  }
+  .lead__imageContainer {
+    display: none;
+  }
+  .lead__searchButton{
+    padding: 12px 15px;
+  }
+
+}
+/*-----LEAD END-----*/
+/*-----CARDS START-----*/
 .cards__wrapper {
   text-align: center;
   padding: 220px 0 200px;
@@ -233,9 +264,21 @@ h3{
   }
 }
 @import "card.scss";
+
+@media (max-width: 767px) {
+  .cards__wrapper {
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+  .cards__button{
+    margin: 2em 0;
+  }
+}
+/*-----CARDS END-----*/
+/*-----CLIENTS START-----*/
 .clients {
   position: relative;
-  margin-bottom: 220px;
+  margin-bottom: 36vh;
   z-index: 1;
   overflow: hidden;
   border-radius: 8px;
@@ -285,7 +328,13 @@ h3{
   justify-content: center;
   gap: 8vw;
 }
-
+@media (max-width: 767px){
+  .clients {
+    margin-bottom: 20vh;
+}
+}
+/*-----CLIENTS END-----*/
+/*-----NEW START-----*/
 .new__container {
   display: flex;
   flex-wrap: wrap;
@@ -312,7 +361,17 @@ h3{
   max-width: 288px;
   font-size: 14px;
 }
+@media (max-width: 767px){
+  .new__header, .new__description  {
+    text-align: center;
+  }
+  .new__cards {
+    justify-content: center;
+  }
+}
+/*-----NEW END-----*/
 @import "slider.scss";
+/*-----LEADFORM START-----*/
 .leadForm {
   margin-top: 251px;
 }
@@ -353,9 +412,5 @@ h3{
   align-self: center;
 
 }
-input{
-  font-size: 14px;
-  line-height: 150%;
-  color: rgba(255, 255, 255, 0.38);
-}
+/*-----LEADFORM END-----*/
 @import "footer.scss";

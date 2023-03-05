@@ -19,20 +19,28 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+.slider__left {
+  transform: translateY(-50%);
+}
+
 .slider__right {
   right: 0;
+  top: 100;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .slider__content {
   padding: 0 10vw;
   display: flex;
-  height: 492px;
+  height: 70vh;
+  overflow: visible;
   gap: 6vw;
 }
 
 .slider__item {
   display: flex;
   width: 80vw;
+  height: 80%;
   padding: 0 10vw 0 0;
   position: absolute;
   transition: all 0.5s ease-out;
@@ -46,7 +54,7 @@
 .slider__table {
   position: absolute;
   bottom: 2%;
-  right: 0%;
+  left: 12%;
   background-color: rgba(40, 48, 54, 0.2);
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
@@ -66,10 +74,12 @@
 }
 
 .slider__text {
+  display: flex;
   font-size: 14px;
   line-height: 214%;
   letter-spacing: 0.015em;
   align-self: center;
+  align-items: center;
   padding: 3em 0 0 3em;
   flex: 1 1 500px;
   background: url(/img/“.png) 0% 0% no-repeat;
@@ -100,4 +110,41 @@
 
 .slider__line_active {
   background-color: rgb(255, 110, 48);
+}
+
+@media (max-width: 995px) {
+  .slider {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider__container {
+    margin-top: 20vh;
+  }
+
+  .slider__item {
+    display: flex;
+    flex-direction: column;
+    background: url("/img/photo__RonaldRichards.png") 50% 30%/contain no-repeat;
+    top: 0px;
+  }
+
+  .slider__photoContainer {
+    display: none;
+  }
+
+  .slider__text {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #283036;
+    border-radius: 8px;
+  }
+
+  .slider__table {
+    position: relative;
+  }
+
+  .slider__lines {
+    margin-top: 0;
+    flex: 1 1 auto;
+  }
 }
