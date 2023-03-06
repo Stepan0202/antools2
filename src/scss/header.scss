@@ -17,7 +17,36 @@
     padding: 0.5em;
     justify-content: space-between;
 }
+.menu__close{
+    display: inline-block;
+    border: solid black 0.5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 5px 5px 1px;
+    transition: transform 0.5s ease;
+    transform-style: flat;
 
+    &:active{
+        background-color: $buttonColor;
+        transform: rotate(180deg);
+    }
+    &:active span{
+        border-color: $textColor;
+    }
+    span{
+        display: inline-block;
+        width: 0;
+        height: 30px;
+        border: 2px solid black;
+    }
+    span:first-child{
+        transform: rotate(45deg) translate(0px, -2px);
+    }
+    span:last-child{
+        transform: rotate(-45deg) translate(0px, -2px);
+    }
+}
 .menu__item {
     position: relative;
 }
@@ -92,7 +121,6 @@ body._touch .menu__arrow._active+.dropMenu{
     transform: translate(0px, 0px);
     background-color: $textColor;
     pointer-events: all;
-    
 }
 /*------------------------*/
 @media (min-width: 767px){
@@ -136,13 +164,17 @@ body._touch .menu__arrow._active+.dropMenu{
     }
 }
 @media(max-width: 767px){
+    .header__container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .menu__icon{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: relative;
-        height: 20px;
-        width: 30px; 
+        height: 40px;
+        width: 60px; 
     }
     .menu__icon span, .menu__icon::before, .menu__icon::after{
         display: inline-block;
@@ -171,7 +203,9 @@ body._touch .menu__arrow._active+.dropMenu{
     .menu__body{
         position: fixed;
         display: flex;
-        visibility: hidden;
+        justify-content: center;
+        align-items: center;
+        // visibility: hidden;
         flex-wrap: wrap;
         left: 0;
         top: 0;
@@ -179,11 +213,18 @@ body._touch .menu__arrow._active+.dropMenu{
         height: 100%;
         background-color: $headerColor;
         text-align: center;
+        transition: transform 2s ease, border-radius 0.3s linear 0.5s;
+        border-radius: 120%;
         
         & a:link, a:visited{
             color: $mainBackground;
             font-size: 24px;
         }
+    }
+    .header__menu .menu__icon._active + .menu__body, .header__menu._active .menu__body{
+        visibility: visible;
+        transform: translateX(100%);
+        border-radius: 0;
     }
     .menu__arrow {
         border-top: 8px solid transparent;
@@ -199,6 +240,9 @@ body._touch .menu__arrow._active+.dropMenu{
         left: -17px;
         top: -6px;
     }
-
+    .header__controls{
+        flex: 1 1 100%;
+        text-align: center;
+    }
 }
 

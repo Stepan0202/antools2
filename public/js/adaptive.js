@@ -22,6 +22,8 @@ const isMobile = {
 if (isMobile.any()) document.body.classList.add("_touch");
 else document.body.classList.add("_pc");
 let menuArrows = document.querySelectorAll(".menu__arrow");
+let burger = document.querySelector(".menu__icon");
+burger.addEventListener('click', showMenu);
 if(menuArrows.length > 0){
     menuArrows.forEach(element => {
         element.addEventListener("click", showMenu);
