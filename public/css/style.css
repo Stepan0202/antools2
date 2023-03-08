@@ -370,23 +370,26 @@ body._touch .menu__arrow._active + .dropMenu {
   }
 
   .menu__icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: relative;
-    height: 40px;
+    height: 45px;
     width: 60px;
+    padding: 1em;
+    z-index: 300;
   }
 
   .menu__icon span, .menu__icon::before, .menu__icon::after {
     display: inline-block;
     position: absolute;
     left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
     height: 15%;
-    width: 100%;
     transition: all 0.3s ease 0s;
     border: 1px solid rgba(255, 255, 255, 0.55);
     background-color: #283036;
+    pointer-events: none;
+    transition: transform 0.5s ease 1s;
   }
 
   .menu__icon::before, .menu__icon::after {
@@ -394,12 +397,12 @@ body._touch .menu__arrow._active + .dropMenu {
   }
 
   .menu__icon::before {
-    top: 0;
+    top: 5px;
   }
 
   .menu__icon::after {
     content: "";
-    bottom: 0;
+    bottom: 5px;
   }
 
   .menu__icon span {
@@ -412,8 +415,9 @@ body._touch .menu__arrow._active + .dropMenu {
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
     flex-wrap: wrap;
-    left: 0;
+    left: -100%;
     top: 0;
     width: 100%;
     height: 100%;
@@ -427,10 +431,25 @@ body._touch .menu__arrow._active + .dropMenu {
     font-size: 24px;
   }
 
-  .header__menu .menu__icon._active + .menu__body, .header__menu._active .menu__body {
+  .header__menu._active .menu__body {
     visibility: visible;
     transform: translateX(100%);
     border-radius: 0;
+  }
+
+  .header__menu._active .menu__icon::before, .header__menu._active .menu__icon::after {
+    border: none;
+  }
+  .header__menu._active .menu__icon::before {
+    transform-origin: bottom left;
+    transform: rotate(45deg) translate(1px, -6px);
+  }
+  .header__menu._active .menu__icon::after {
+    transform-origin: bottom left;
+    transform: rotate(-45deg) translate(6px, 10px);
+  }
+  .header__menu._active .menu__icon span {
+    visibility: hidden;
   }
 
   .menu__arrow {
@@ -589,7 +608,7 @@ body._touch .menu__arrow._active + .dropMenu {
   }
 
   .lead__socialLinks {
-    margin-top: 25px;
+    margin-top: 15px;
   }
 }
 /*-----LEAD END-----*/

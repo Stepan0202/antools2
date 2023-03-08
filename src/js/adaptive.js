@@ -31,4 +31,6 @@ if(menuArrows.length > 0){
 }
 function showMenu(e){
     e.target.parentNode.classList.toggle("_active");
+    console.log(e.target);
+    console.log(e.target.parentNode);
 }
