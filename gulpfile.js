@@ -25,9 +25,13 @@ const watcher = () => {
 
 const server = () => {
         browserSync.init({
-            server:{
-                baseDir: path.root,
+            // server:{
+            //     baseDir: path.root,
+            // },
+            proxy: {
+                target: "http://antools.sd/",
             }
+
         })
     }
 

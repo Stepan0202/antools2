@@ -31,7 +31,9 @@
 .slider__content {
   padding: 0 10vw;
   display: flex;
-  height: 70vh;
+  min-height: fit-content;
+  height: 600px;
+  max-height: 100vh;
   overflow: visible;
   gap: 6vw;
 }

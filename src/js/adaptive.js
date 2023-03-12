@@ -31,6 +31,6 @@ if(menuArrows.length > 0){
 }
 function showMenu(e){
     e.target.parentNode.classList.toggle("_active");
-    console.log(e.target);
-    console.log(e.target.parentNode);
+    document.body.classList.toggle("_lock");
+    document.querySelector(".header__logo").classList.toggle("_onMenu");
 }

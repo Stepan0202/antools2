@@ -33,9 +33,12 @@ body{
     font-size: 12px;
     line-height: 138.5%;
     letter-spacing: 0.08em;
-    background-color: $mainBackground;
+    background-color: orange;
     color: $textColor;
     width: 100%;
+    &._lock{
+      overflow: hidden;
+    }
 }
 .wrapper{
     display: flex;
