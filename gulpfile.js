@@ -1,4 +1,6 @@
 const{ watch, series, parallel} = require("gulp"); // берем методі src и dest из запрошенного j,]trnf gulp
+const phpConfigs = require("./src/task/phpConfigs");
+const php = require("./src/task/php");
 const html = require("./src/task/html");
 const scss = require("./src/task/scss");
 const js = require("./src/task/js.js")
@@ -10,10 +12,9 @@ const path = require("./src/myConfigs/path");
 // Plugins
 
 const browserSync = require("browser-sync").create();
-
-
 const watcher = () => {
-    
+    watch([path.phpModules.watch, path.phpModules.watch]).on("all", series(phpConfigs, browserSync.reload));
+    watch([path.php.watch, path.phpModules.watch]).on("all", series(php, browserSync.reload));
     watch([path.html.watch, path.htmlModules.watch]).on("all", series(html, browserSync.reload));
     watch([path.scss.watch, path.exceptions.nodeModules]).on("all", series(scss, browserSync.reload));
     watch([path.js.watch, path.exceptions.nodeModules]).on("all", series(js, browserSync.reload));
@@ -25,18 +26,17 @@ const watcher = () => {
 
 const server = () => {
         browserSync.init({
-            // server:{
-            //     baseDir: path.root,
-            // },
-            proxy: {
-                target: "http://antools.sd/",
-            }
+            server:{
+                baseDir: path.root,
+            },
 
         })
     }
 
     exports.dev = series(
     clear,
+    phpConfigs,
+    php,
     html, 
     scss,
     js,

@@ -108,7 +108,7 @@ body {
   font-size: 12px;
   line-height: 138.5%;
   letter-spacing: 0.08em;
-  background-color: orange;
+  background-color: #283036;
   color: rgba(255, 255, 255, 0.55);
   width: 100%;
 }
@@ -130,14 +130,15 @@ body._lock {
   margin: 0 auto;
 }
 
-.button {
+.button, .button a, .button a:link {
   font-size: 16px;
   line-height: 150%;
   font-weight: 600;
   color: #FDF5FF;
-  border-radius: 8px;
+  border-radius: 50px;
+  letter-spacing: 1px;
 }
-.button:hover {
+.button:hover, .button a:hover, .button a:link:hover {
   cursor: pointer;
 }
 
@@ -170,14 +171,40 @@ h3 {
 }
 
 .logo {
+  font-size: 22px;
+  line-height: 150%;
+  color: rgba(255, 255, 255, 0.9);
+}
+.logo a {
+  display: inline-block;
   display: flex;
   border-radius: 9px;
   overflow: hidden;
   align-items: center;
   gap: 10px;
-  font-size: 22px;
-  line-height: 150%;
-  color: rgba(255, 255, 255, 0.9);
+}
+.logo a:link {
+  color: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+.logo a:visited {
+  color: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+.logo a:hover, .logo a:active {
+  color: inherit;
+  font-style: normal;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
 }
 
 .logo__img {
@@ -187,7 +214,7 @@ h3 {
 input {
   font-size: 14px;
   line-height: 150%;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgb(245, 243, 243);
 }
 
 /*----COMMON END----*/
@@ -1191,6 +1218,25 @@ body._touch .menu__arrow._active + .dropMenu {
 }
 
 /*-----LEADFORM END-----*/
+.signUpForm {
+  margin-top: 1em;
+}
+
+.signUpForm__form {
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  margin-top: 2em;
+}
+.signUpForm__form label {
+  font-size: large;
+}
+.signUpForm__form input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.315);
+  border-radius: 8px;
+}
+
 .footer {
   margin-top: 240px;
   padding-bottom: 98px;

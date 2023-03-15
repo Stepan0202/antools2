@@ -3,11 +3,20 @@ const pathDest = "./public";
 
 module.exports = {
     root: pathDest, 
-
+    php : {
+        src:  pathSrc + "*.php",
+        watch: pathSrc + "*.php",
+        dest: pathDest,
+    },
+    phpModules : {
+        src: pathSrc + "php/**/*.php",
+        watch: pathSrc + "php/**/*.php",
+        dest: pathDest + "/php",
+    },
     html: {
         src:  pathSrc + "*.html",
         watch: pathSrc + "*.html",
-        dest: pathDest
+        dest: pathDest,
     },
     htmlModules: {
         watch: pathSrc + "html/**/*.html",

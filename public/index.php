@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Antools</title>
-    <link rel="icon" type="image/x-icon" href="/img/logo.ico">
-</head>
-<body>
+
+    <?php
+        include $_SERVER["DOCUMENT_ROOT"] . "/php/phpConfigs/db.php";
+        include $_SERVER["DOCUMENT_ROOT"] . "/php/partials/header.php";
+
+       
+    ?>
+    
     <div class="wrapper">
         <header class="header">
         <div class="header__container container">
             <div class="header__logo logo">
-                <img src="/img/logo.jpg" alt="" class="logo__img">
-                <p class="logo__name">antools.</p>
+                <a href="/">
+                    <img src="/img/logo.jpg" alt="Antools logo. Go to the main page" class="logo__img">
+                    <p class="logo__name">antools.</p>
+                </a>
             </div>
             <div class="header__menu menu">
                 <div class="menu__icon">
@@ -24,7 +23,7 @@
                 </div>
                 <nav class="menu__body">
                     <ul class="menu__list">
-                        <li class="menu__item"> <a class="menu__link" href="">Home</a></li>
+                        <li class="menu__item"> <a class="menu__link" href="/">Home</a></li>
                         <li class="menu__item menu__item_drop">
                             <a class="menu__link" href="">Categories</a>
                             <span class="menu__arrow"><span class="menu__arrow_2"></span></span>
@@ -45,7 +44,7 @@
                     Login
                 </button>
                 <button class="button button_colorfull signIn header__signIn">
-                    Sign Up
+                    <a href="/signUp.php">Sign Up</a>
                 </button>
             </div>
         </div>
@@ -416,5 +415,6 @@
     </div>
     <script src="/js/adaptive.js"></script>
     <script src="/js/slider.js"></script>
-</body>
-</html>
+<?php
+    require($_SERVER["DOCUMENT_ROOT"]. "/php/partials/footer.php");
+?>

@@ -9,12 +9,3 @@
     <link rel="icon" type="image/x-icon" href="/img/logo.ico">
 </head>
 <body>
-    <div class="wrapper">
-        @@include("html/header.html")
-        @@include("html/main.html")
-        @@include("html/footer.html")
-    </div>
-    <script src="/js/adaptive.js"></script>
-    <script src="/js/slider.js"></script>
-</body>
-</html>
