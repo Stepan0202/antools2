@@ -1,6 +1,8 @@
 @import "nullstyle.scss";
 @import "fonts.scss";
 @import "variables.scss";
+@import "scssBootstrap/bootstrap-grid.scss";
+
 
 /*----COMMON START----*/
 a:link {
@@ -69,6 +71,9 @@ body{
 .button_colorfull {
   border-radius: 6px;
   background-color: $buttonColor;
+}
+.button__admin{
+  font-size: 10px;
 }
 h1{
   font-size: 50px;

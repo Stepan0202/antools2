@@ -78,6 +78,7 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "simplebar": "latest"
   },
   "main": "gulpfile.js",

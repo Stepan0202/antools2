@@ -2,8 +2,7 @@
     <?php
         include $_SERVER["DOCUMENT_ROOT"] . "/php/phpConfigs/db.php";
         include $_SERVER["DOCUMENT_ROOT"] . "/php/partials/header.php";
-
-       
+        $sql_get = "SELECT * FROM user";
     ?>
     
     <div class="wrapper">
@@ -36,6 +35,7 @@
                         </li>
                         <li class="menu__item"><a class="menu__link" href="">My Collections</a></li>
                         <li class="menu__item"><a class="menu__link" href="">Blog</a></li>
+                        <li class="menu__item adminOnly"><a class="menu__link" href="/php/admin/">Admin panel</a></li>
                     </ul>
                 </nav>
             </div>
@@ -49,6 +49,35 @@
             </div>
         </div>
 </header> 
+
+        <div class="container text-center">
+        
+            <div class="row">
+            <?php
+                if($result = mysqli_query($conn, $sql_get)){
+                    
+                    $keys = array_keys($result->fetch_assoc());
+                    foreach ($keys as $key){
+                        echo '<div class="col">' . ucfirst($key) . '</div>';
+                    }
+ 
+                ?>
+            </div>
+            <?php
+                   foreach($result as $row){
+                    echo '<div class="row">';
+                        foreach($row as $cell){
+                            
+                            echo '<div class="col">' . $cell . '</div>';
+                            
+                        }
+                    echo '</div>';
+                }
+            }
+            ?>
+         
+        </div>
+
         <main class="main">
     <section class="lead">
         <div class="lead__container container">

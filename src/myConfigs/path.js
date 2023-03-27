@@ -4,7 +4,7 @@ const pathDest = "./public";
 module.exports = {
     root: pathDest, 
     php : {
-        src:  pathSrc + "*.php",
+        src:  pathSrc + "**/*.php",
         watch: pathSrc + "*.php",
         dest: pathDest,
     },
