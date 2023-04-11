@@ -1,5 +1,4 @@
 <?php
-    include $_SERVER["DOCUMENT_ROOT"] . "/php/phpConfigs/db.php";
     include $_SERVER["DOCUMENT_ROOT"] . "/php/partials/header.php";
 ?>
 <header class="header">
@@ -31,7 +30,6 @@
                         </li>
                         <li class="menu__item"><a class="menu__link" href="">My Collections</a></li>
                         <li class="menu__item"><a class="menu__link" href="">Blog</a></li>
-                        <li class="menu__item adminOnly"><a class="menu__link" href="/php/admin/">Admin panel</a></li>
                     </ul>
                 </nav>
             </div>
@@ -66,17 +64,18 @@
         
         $nameOrMail = $_POST['signUpForm__mailOrName'];
         $pas = $_POST['signUpForm__pas'];
-        
-
-        $sql_get = "SELECT * FROM `user`";
+        $sql_get = "SELECT * FROM `user` WHERE `name` = '" . $nameOrMail . "' AND password = '" . $pas . "'";
         $result = mysqli_query($conn, $sql_get);
+        $user = $result->fetch_assoc();
+        $_SESSION["userID"] = $user['id'];
+        $_SESSION["isAdmin"] = $user['isAdmin']; 
         foreach ($result as $row){
             if(($row['name'] == $nameOrMail || $row['mail'] == $nameOrMail) && $row['password'] == $pas){
-                die ("Enter is sucesfull!");
+                die ("Enter is sucesfull! USER ID: " . $_SESSION["userID"] . "isAdmin: " . $_SESSION["isAdmin"]);
             }
         }
         echo "Wrong name or password";
     }
-
+    echo $_SESSION["userID"];
     require($_SERVER["DOCUMENT_ROOT"]. "/php/partials/footer.php");
-?>
+?>  

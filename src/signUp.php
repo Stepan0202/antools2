@@ -1,5 +1,4 @@
 <?php
-    include $_SERVER["DOCUMENT_ROOT"] . "/php/phpConfigs/db.php";
     include $_SERVER["DOCUMENT_ROOT"] . "/php/partials/header.php";
 
 ?>

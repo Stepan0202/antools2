@@ -1,3 +1,8 @@
+<?php
+    include $_SERVER["DOCUMENT_ROOT"] . "/php/phpConfigs/db.php";
+    session_save_path($_SERVER['DOCUMENT_ROOT'] . '/php/tmp/session');
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

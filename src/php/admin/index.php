@@ -1,6 +1,5 @@
 
 <?php
-        include $_SERVER["DOCUMENT_ROOT"] . "/php/phpConfigs/db.php";
         include $_SERVER["DOCUMENT_ROOT"] . "/php/partials/header.php";
         $sql_get = "SELECT * FROM user";
     ?>
@@ -24,12 +23,15 @@
             </div>
             <?php
                    foreach($result as $row){
-                    echo '<div class="row">';
+                        echo '<div class="row">';
                         foreach($row as $cell){
                             echo '<div class="col">' . $cell . '</div>';
                         }
-                        echo '<div class="col"><button class="button button__admin button__admin_delete" data-id="'.$row['id'] .'">Delete</button></div>';
-                    echo '</div>';
+                        echo '<div class="col">
+                                <button class="button button__admin button__admin_edit" data-id="'.$row['id'] .'">Edit</button>
+                                <button class="button button__admin button__admin_delete" data-id="'.$row['id'] .'">Delete</button>
+                            </div>';
+                        echo '</div>';
                 }
             }
             ?>

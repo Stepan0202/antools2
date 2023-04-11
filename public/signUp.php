@@ -1,5 +1,4 @@
 <?php
-    include $_SERVER["DOCUMENT_ROOT"] . "/php/phpConfigs/db.php";
     include $_SERVER["DOCUMENT_ROOT"] . "/php/partials/header.php";
 
 ?>
@@ -32,7 +31,6 @@
                         </li>
                         <li class="menu__item"><a class="menu__link" href="">My Collections</a></li>
                         <li class="menu__item"><a class="menu__link" href="">Blog</a></li>
-                        <li class="menu__item adminOnly"><a class="menu__link" href="/php/admin/">Admin panel</a></li>
                     </ul>
                 </nav>
             </div>
